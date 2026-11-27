@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Yuxiao Dai"
+  site-url: "https://yuxiaodai.github.io"
+  description: "Notes and experiments on LLM evals and post-training."
+  navbar:
+    right:
+      - href: index.qmd
+        text: About
+      - href: writing.qmd
+        text: Writing
+      - icon: github
+        href: https://github.com/YuxiaoDai
+        aria-label: GitHub
+      - icon: twitter-x
+        href: https://x.com/anglxAI
+        aria-label: X
+      - icon: rss
+        href: writing.xml
+        aria-label: RSS
+
+language:
+  listing-page-no-matches: "First post coming in January 2027."
+
+format:
+  html:
+    theme:
+      light: litera
+      dark: darkly
+    css: styles.css
+    toc: false
+    smooth-scroll: true
+    code-copy: true

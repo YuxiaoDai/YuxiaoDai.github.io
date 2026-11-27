@@ -1,0 +1,30 @@
+---
+title: "Yuxiao Dai"
+about:
+  template: trestles
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/YuxiaoDai
+    - icon: twitter-x
+      text: X
+      href: https://x.com/anglxAI
+---
+
+Researcher with 7 years in statistical modeling and machine learning, based in New York.
+
+I am learning LLM post-training and evaluation in public. The questions I care about are
+statistical ones: is a score difference real or noise, did the model see the test set,
+and is the agent solving the task or gaming the grader.
+
+Every number I publish comes from a script you can re-run.
+
+## Projects
+
+**[custom-tutor](https://github.com/YuxiaoDai/custom-tutor)** — a Claude Code skill that
+merges several university courses into one personal study plan, then teaches, sets
+exercises, and grades them.
+
+## Writing
+
+See [Writing](writing.qmd). First long post planned for January 2027.

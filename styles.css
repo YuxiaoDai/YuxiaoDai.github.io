@@ -1,0 +1,9 @@
+/* Keep text at a readable measure. */
+main.content {
+  max-width: 720px;
+}
+
+body {
+  font-size: 1.05rem;
+  line-height: 1.65;
+}

@@ -1,0 +1,10 @@
+# Defaults applied to every post under posts/.
+format:
+  html:
+    toc: true
+    code-fold: show
+# Notebooks are rendered once locally and the results are frozen, so the CI
+# build never re-runs experiments or needs API keys.
+execute:
+  freeze: true
+title-block-banner: false

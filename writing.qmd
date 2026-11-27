@@ -1,0 +1,13 @@
+---
+title: "Writing"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+  date-format: "YYYY-MM-DD"
+---
+
+Long-form notes on LLM evals, post-training, and agents. Each post links to the code
+that produced its numbers.
