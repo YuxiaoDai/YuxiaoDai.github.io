@@ -6,20 +6,36 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: quarto-dev/quarto-actions/setup@v2
 
-      # Renders the site (using frozen results in _freeze/) and pushes it to
-      # the gh-pages branch. Set Pages to serve from gh-pages in repo settings.
-      - uses: quarto-dev/quarto-actions/publish@v2
+      # Uses frozen results in _freeze/, so no experiment is re-run in CI.
+      - name: Render site
+        run: quarto render
+
+      - uses: actions/upload-pages-artifact@v3
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

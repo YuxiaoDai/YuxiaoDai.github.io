@@ -14,7 +14,7 @@ quarto preview
    `description`, and `categories` in the front matter.
 2. Run `quarto render` locally so results are frozen into `_freeze/`; commit `_freeze/`.
    CI never re-runs experiments.
-3. Push to `main`. The workflow renders and publishes to the `gh-pages` branch.
+3. Push to `main`. The workflow renders the site and deploys it with GitHub Pages Actions.
 
 ## Content rules
 
@@ -24,5 +24,4 @@ quarto preview
 ## First-time setup
 
 1. Push this repo as `YuxiaoDai/YuxiaoDai.github.io` (public).
-2. Run `quarto publish gh-pages` once locally (creates the branch), or let the workflow run.
-3. Settings → Pages → Source: deploy from branch `gh-pages` / root.
+2. Settings → Pages → Source: **GitHub Actions**. No `gh-pages` branch is used.
